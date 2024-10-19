@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Tarefas</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Tarefas</title>
+</head>
+
+<body>
+
+  {% include 'header.html' %}
+
+  <main>
     <h1>Lista de Tarefas</h1>
     <a href="/add">Adicionar Tarefa</a>
     <ul>
       {% for task in tasks %}
       <li>
-        {{ task[2] }} - {{ task[3] }} -   {% if task[4] == 'on' %} Concluído {%
+        {{ task[2] }} - {{ task[3] }} - {% if task[4] == 'on' %} Concluído {%
         else %} Pendente {% endif %} - {{ task[5] }}
         <a href="/edit/{{ task[0] }}">Editar</a>
         <a href="/delete/{{ task[0] }}">Remover</a>
       </li>
       {% endfor %}
     </ul>
-  </body>
+  </main>
+  {% include 'footer.html' %}
+</body>
+
 </html>

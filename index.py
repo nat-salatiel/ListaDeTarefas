@@ -22,7 +22,7 @@ def home():
     tasks = cur.fetchall()
     # print('\n\n', tasks, '\n\n')t5hy5hy5h5y
     cur.close()
-    return render_template('home.html', tasks=tasks, status='46764 ')
+    return render_template('.home.html', tasks=tasks, status='46764 ')
 
 
 @app.route('/add', methods=['GET', 'POST'])
