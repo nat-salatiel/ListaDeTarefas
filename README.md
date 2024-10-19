@@ -1,2 +1,2 @@
-# AplicativoPythonFlask-2024.09.30
+Aplicativo simples de lista de tarefas. Utilizando Python, Flask e MySQL. Atividade de protagonismo do aluno.
  
