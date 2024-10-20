@@ -3,34 +3,35 @@
 
 <head>
   <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Configura a visualização responsiva -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Configura a visualização responsiva para dispositivos móveis -->
   <title>Lista de Tarefas</title> <!-- Título da página exibido na aba do navegador -->
 </head>
 
 <body>
+  {% block content %} <!-- Início do bloco de conteúdo que pode ser substituído por outros templates -->
+  {% include 'header.html' %} <!-- Inclui o cabeçalho da página a partir de um arquivo externo -->
 
-  {% include 'header.html' %} <!-- Inclui o cabeçalho da página -->
-  
   <div class="home-main"> <!-- Div principal que envolve o conteúdo da página -->
     <main>
-      <ul class="home-ul"> <!-- Adiciona a lista não ordenada -->
-      {% for task in tasks %} <!-- Início do loop para iterar sobre as tarefas -->
-      <li class="home-ul-li">
-        {{ task[2] }} - {{ task[3] }} - 
-        {% if task[4] == 'concluido' %} Concluído {% else %} Pendente {% endif %} - 
-        {{ task[5] }}
-        
-        <div class="task-actions">
-          <a href="/edit/{{ task[0] }}">Editar</a>
-          <a href="/delete/{{ task[0] }}">Remover</a>
-        </div>
-      </li>
-      {% endfor %} <!-- Fim do loop para as tarefas -->
-    </ul> <!-- Fim da lista não ordenada -->
+      <ul class="home-ul"> <!-- Cria uma lista não ordenada para exibir as tarefas -->
+        {% for task in tasks %} <!-- Início do loop para iterar sobre as tarefas passadas para o template -->
+        <li class="home-ul-li"> <!-- Cada item da lista representa uma tarefa -->
+          {{ task[2] }}: {{ task[3] }}|  <!-- Exibe o título e a descrição da tarefa -->
+          {% if task[4] == 'concluido' %} <strong> Concluído </strong> {% else %} <strong> Pendente </strong> {% endif %} - 
+          {{ task[5] }} <!-- Exibe o status da tarefa em negrito e a data de criação -->
+          
+          <div class="task-actions"> <!-- Div para as ações da tarefa -->
+            <a href="/edit/{{ task[0] }}">Editar</a> <!-- Link para editar a tarefa -->
+            <a href="#" onclick="if(confirm('Tem certeza que deseja apagar a tarefa \'{{ task[2] }}\'?')) location.href='/delete/{{ task[0] }}'">Remover</a> <!-- Link para remover a tarefa com confirmação -->
+          </div>
+        </li>
+        {% endfor %} <!-- Fim do loop para as tarefas -->
+      </ul> <!-- Fim da lista não ordenada -->
     </main>
   </div>
   
-  {% include 'footer.html' %} <!-- Inclui o rodapé da página -->
+  {% include 'footer.html' %} <!-- Inclui o rodapé da página a partir de um arquivo externo -->
+  {% endblock %} <!-- Fim do bloco de conteúdo -->
   
 </body>
 

@@ -9,8 +9,8 @@ USE aplicativopythonflask;
 CREATE TABLE tasks (
 	task_id INT PRIMARY KEY AUTO_INCREMENT,
     task_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    task_titulo VARCHAR(127) NOT NULL,
-    task_descricao TEXT NOT NULL,
+    task_title VARCHAR(127) NOT NULL,
+    task_description TEXT NOT NULL,
     task_status ENUM('concluido', 'pendente', 'del') DEFAULT 'pendente'
 );
 

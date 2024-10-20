@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <title>Lista de Tarefas</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização responsiva para dispositivos móveis -->
+    <link rel="stylesheet" href="/static/css/style.css"> <!-- Link para o arquivo CSS externo para estilos -->
+    <title>Lista de Tarefas</title> <!-- Título da página exibido na aba do navegador -->
 </head>
 <body>
-    <header class="header">
-        <h1 class="header-title">Minha Lista de Tarefas</h1>
-        <nav class="header-nav">
-            <ul class="header-nav-ul">
-                <li class="header-nav-ul-li"><a href="{{ url_for('home') }}">Home</a></li>
-                <li class="header-nav-ul-li"><a href="{{ url_for('add_task') }}">Adicionar Tarefa</a></li>
+    <header class="header"> <!-- Seção de cabeçalho da página -->
+        <h1 class="header-title">Minha Lista de Tarefas</h1> <!-- Título principal da lista de tarefas -->
+        <nav class="header-nav"> <!-- Seção de navegação do cabeçalho -->
+            <ul class="header-nav-ul"> <!-- Lista não ordenada para os itens de navegação -->
+                <li class="header-nav-ul-li"><a href="{{ url_for('home') }}">Home</a></li> <!-- Link para a página inicial -->
+                <li class="header-nav-ul-li"><a href="{{ url_for('add_task') }}">Adicionar Tarefa</a></li> <!-- Link para a página de adicionar tarefa -->
             </ul>
         </nav>
     </header>

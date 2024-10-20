@@ -63,8 +63,8 @@ body {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-/* (.home.html) Estilos para a seção principal da página */
-.home-main, .add-main, .edit-main {
+/* Estilos para a seção principal da página */
+.home-main, .add-main, .edit-main, .error-main {
     background-color: var(--background--templates); /* Define a cor de fundo para as seções principais */
 }
 
@@ -89,7 +89,7 @@ body {
 }
 
 /* (add_task.html) e (edit_task.html) Estilos para os títulos das páginas de adicionar e editar */
-.add-title, .edit-title {
+.add-title, .edit-title, .error-title {
     color: var(--title--color); /* Define a cor do título */
     text-align: center; /* Centraliza o texto */
     font-size: 22px; /* Define o tamanho da fonte do título */
@@ -171,4 +171,21 @@ textarea:focus {
     margin: 0; /* Remove a margem do parágrafo do rodapé */
     padding: 0; /* Remove o preenchimento do parágrafo do rodapé */
     color: var(--footer--color); /* Define a cor do texto do rodapé */
+}
+
+/* (404.html) Estilos para a página de erro 404 */
+.error-message {
+    text-align: center; /* Centraliza o texto da mensagem de erro */
+    color: var(--text--color); /* Define a cor do texto da mensagem de erro */
+    font-size: 1.5rem; /* Define o tamanho da fonte da mensagem de erro */
+    margin: 5px 0 10px 0; /* Define a margem acima e abaixo da mensagem de erro */
+}
+
+.error-main img {
+    width: 700px; /* Define a largura da imagem */
+    height: auto; /* Mantém a proporção da altura da imagem */
+    display: block; /* Exibe a imagem como um bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    max-width: 100%; /* Garante que a imagem não exceda a largura do contêiner */
+    padding-bottom: 15px; /* Adiciona preenchimento abaixo da imagem */
 }

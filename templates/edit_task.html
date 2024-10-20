@@ -1,36 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização responsiva para dispositivos móveis -->
+    <title>Editar</title> <!-- Título da página exibido na aba do navegador -->
 </head>
 
 <body>
 
-    {% include 'header.html' %}
+    {% include 'header.html' %} <!-- Inclui o cabeçalho da página a partir de um arquivo externo -->
 
-    <div class="edit-main">
+    <div class="edit-main"> <!-- Div principal para a seção de edição -->
         <main>
-            <h1 class="edit-title">Editar Tarefa</h1>
-            <form class="edit-form" method="POST">
-                <label class="edit-form-label">Título:</label>
-                <input type="text" name="titulo" value="{{ task[2] }}" required>
-                <label class="edit-form-label">Descrição:</label>
-                <textarea name="descricao" required>{{ task[3] }}</textarea>
-                <div class="status">
-                    <label class="edit-form-label">Status:</label>
-                    <input class="status" type="checkbox" name="status" value="on" {{checked}}> Concluído
+            <h1 class="edit-title">Editar Tarefa</h1> <!-- Título da seção de edição -->
+            <form class="edit-form" method="POST"> <!-- Formulário para editar a tarefa, enviando dados via método POST -->
+                <label class="edit-form-label">Título:</label> <!-- Rótulo para o campo de título -->
+                <input type="text" name="title" value="{{ task[2] }}" required> <!-- Campo de entrada para o título, preenchido com o valor atual da tarefa -->
+                
+                <label class="edit-form-label">Descrição:</label> <!-- Rótulo para o campo de descrição -->
+                <textarea name="description" required>{{ task[3] }}</textarea> <!-- Área de texto para a descrição, preenchida com o valor atual da tarefa -->
+                
+                <div class="status"> <!-- Seção para o status da tarefa -->
+                    <label class="edit-form-label">Status:</label> <!-- Rótulo para o campo de status -->
+                    <input class="status" type="checkbox" name="status" value="on" {{checked}}> Concluído <!-- Checkbox para marcar a tarefa como concluída, com valor dinâmico para indicar se está marcada -->
                 </div>
-                <button type="submit">Salvar</button>
+                
+                <button type="submit">Salvar</button> <!-- Botão para enviar o formulário e salvar as alterações -->
             </form>
-
-
-
         </main>
     </div>
-    {% include 'footer.html' %}
+    
+    {% include 'footer.html' %} <!-- Inclui o rodapé da página a partir de um arquivo externo -->
 </body>
 
 </html>

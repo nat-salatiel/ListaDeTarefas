@@ -1,31 +1,31 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar</title>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização responsiva para dispositivos móveis -->
+    <title>Adicionar</title> <!-- Título da página exibido na aba do navegador -->
 </head>
 
 <body>
-    {% include 'header.html' %}
+    {% include 'header.html' %} <!-- Inclui o cabeçalho da página a partir de um arquivo externo -->
 
-    <div class="add-main">
+    <div class="add-main"> <!-- Div principal para a seção de adição de tarefas -->
         <main>
-            <h1 class="add-title">Adicionar Tarefa</h1>
-            <form class="add-form" method="POST">
-                <label class="add-form-label">Título:</label>
-                <input type="text" name="titulo" required>
-                <label class="add-form-label" >Descrição:</label>
-                <textarea name="descricao" required></textarea>
-                <button type="submit">Adicionar</button>
-
+            <h1 class="add-title">Adicionar Tarefa</h1> <!-- Título da seção de adição -->
+            <form class="add-form" method="POST"> <!-- Formulário para adicionar uma nova tarefa, enviando dados via método POST -->
+                <label class="add-form-label">Título:</label> <!-- Rótulo para o campo de título -->
+                <input type="text" name="title" required> <!-- Campo de entrada para o título, obrigatório -->
+                
+                <label class="add-form-label">Descrição:</label> <!-- Rótulo para o campo de descrição -->
+                <textarea name="description" required></textarea> <!-- Área de texto para a descrição, obrigatória -->
+                
+                <button type="submit">Adicionar</button> <!-- Botão para enviar o formulário e adicionar a nova tarefa -->
             </form>
-
-
         </main>
     </div>
-    {% include 'footer.html' %}
+    
+    {% include 'footer.html' %} <!-- Inclui o rodapé da página a partir de um arquivo externo -->
 </body>
 
 </html>
