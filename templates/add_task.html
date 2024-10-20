@@ -10,20 +10,21 @@
 <body>
     {% include 'header.html' %}
 
-    <main>
-        <h1>Adicionar Tarefa</h1>
-        <form method="POST">
-            <label>Título:</label>
-            <input type="text" name="titulo" required>
-            <label>Descrição:</label>
-            <textarea name="descricao" required></textarea>
-            <button type="submit">Adicionar</button>
+    <div class="add-main">
+        <main>
+            <h1 class="add-title">Adicionar Tarefa</h1>
+            <form class="add-form" method="POST">
+                <label class="add-form-label">Título:</label>
+                <input type="text" name="titulo" required>
+                <label class="add-form-label" >Descrição:</label>
+                <textarea name="descricao" required></textarea>
+                <button type="submit">Adicionar</button>
 
-        </form>
+            </form>
 
 
-    </main>
-
+        </main>
+    </div>
     {% include 'footer.html' %}
 </body>
 

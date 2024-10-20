@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css">
-    <title>Header</title>
+    <title>Lista de Tarefas</title>
 </head>
 <body>
-    
+    <header class="header">
+        <h1 class="header-title">Minha Lista de Tarefas</h1>
+        <nav class="header-nav">
+            <ul class="header-nav-ul">
+                <li class="header-nav-ul-li"><a href="{{ url_for('home') }}">Home</a></li>
+                <li class="header-nav-ul-li"><a href="{{ url_for('add_task') }}">Adicionar Tarefa</a></li>
+            </ul>
+        </nav>
+    </header>
 </body>
 </html>

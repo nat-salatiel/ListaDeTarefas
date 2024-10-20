@@ -1,5 +1,174 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reseta margens e preenchimentos de todos os elementos */
+:root {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos nas dimensões totais dos elementos */
+    
+    /* Definição de variáveis de cores para uso em todo o CSS */
+    --link--color: #062e58; /* Cor dos links */
+    --title--color: #15117c; /* Cor dos títulos */
+    --border--color: #15117c; /* Cor das bordas */
+    --text--color: #27262b; /* Cor do texto */
+    --footer--color: #f5f5f5; /* Cor do texto do rodapé */
+    --background--header--footer: #a69dcc; /* Cor de fundo do cabeçalho e rodapé */
+    --background--templates: #a9a9c7; /* Cor de fundo para templates */
+}
+
+/* Estilos para o corpo da página */
+body {
+    background-color: #e2def7; /* Define a cor de fundo do corpo */
+    margin: .30rem; /* Define a margem ao redor do corpo */
+    padding: .5rem; /* Define o preenchimento interno do corpo */
+}
+
+/* (header.html) Estilos para o cabeçalho */
+.header {
+    background-color: var(--background--header--footer); /* Define a cor de fundo do cabeçalho */
+}
+
+/* Estilos para o título do cabeçalho */
+.header-title {
+    text-align: center; /* Centraliza o texto */
+    margin: 0; /* Remove a margem do título */
+    padding: 10px; /* Adiciona preenchimento ao redor do título */
+    color: var(--title--color); /* Define a cor do texto do título */
+}
+
+/* Estilos para a navegação do cabeçalho */
+.header-nav {
+    padding: 8px; /* Adiciona preenchimento ao redor da navegação */
+}
+
+/* Estilos para a lista de navegação */
+.header-nav-ul {
+    display: flex; /* Exibe os itens em linha (flexbox) */
+    margin: 0; /* Remove a margem da lista */
+    padding: 0; /* Remove o preenchimento da lista */
+    gap: 20px; /* Espaçamento entre os itens da lista */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    list-style-type: none; /* Remove os marcadores da lista */
+}
+
+/* Estilos para os links dentro dos itens da lista de navegação */
+.header-nav-ul-li a {
+    color: var(--link--color); /* Cor padrão do link */
+    text-decoration: none; /* Remove o sublinhado do link */
+    font-size: 24px; /* Define o tamanho da fonte do link */
+}
+
+/* Estilos para os links ao passar o mouse */
+.header-nav-ul-li a:hover {
+    color: #0a2038; /* Cor do link ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* (.home.html) Estilos para a seção principal da página */
+.home-main, .add-main, .edit-main {
+    background-color: var(--background--templates); /* Define a cor de fundo para as seções principais */
+}
+
+/* Estilos para itens da lista na página principal */
+.home-ul-li {
+    font-size: 1.5rem; /* Define o tamanho da fonte dos itens da lista */
+    padding: 10px; /* Adiciona preenchimento aos itens da lista */
+    color: var(--text--color); /* Define a cor do texto dos itens da lista */
+}
+
+/* Estilos para ações de tarefas (links) */
+.task-actions a {
+    font-size: 1.2rem; /* Define o tamanho da fonte dos links de ação */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: var(--link--color); /* Define a cor do link */
+}
+
+/* Estilos para os links de ações ao passar o mouse */
+.task-actions a:hover {
+    color: #0a2038; /* Cor do link ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* (add_task.html) e (edit_task.html) Estilos para os títulos das páginas de adicionar e editar */
+.add-title, .edit-title {
+    color: var(--title--color); /* Define a cor do título */
+    text-align: center; /* Centraliza o texto */
+    font-size: 22px; /* Define o tamanho da fonte do título */
+    margin: 10px 0; /* Define a margem acima e abaixo do título */
+    padding: 5px 0; /* Adiciona preenchimento acima e abaixo do título */
+}
+
+/* Estilos para os formulários de adicionar e editar */
+.add-form, .edit-form {
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Alinha os itens na coluna */
+    gap: 5px; /* Espaçamento entre os itens do formulário */
+    padding: 10px; /* Adiciona preenchimento ao redor do formulário */
+}
+
+/* Estilos para os rótulos dos formulários */
+.add-form-label, .edit-form-label {
+    font-size: 1.2rem; /* Define o tamanho da fonte dos rótulos */
+    color: var(--text--color); /* Define a cor do texto dos rótulos */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+}
+
+/* Estilos para os campos de entrada dos formulários */
+.add-form input, .edit-form input {
+    border-radius: 3px; /* Arredonda os cantos dos campos de entrada */
+    border: 1px solid var(--border--color); /* Define a borda com a cor especificada */
+    padding: 5px; /* Adiciona preenchimento interno ao campo de entrada */
+}
+
+/* Estilos para as caixas de texto dos formulários */
+.add-form textarea, .edit-form textarea {
+    border-radius: 3px; /* Arredonda os cantos das caixas de texto */
+    border: 1px solid var(--border--color); /* Define a borda com a cor especificada */
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 3rem; /* Define uma altura mínima para a caixa de texto */
+}
+
+/* Estilos para o status das tarefas */
+.status {
+    color: var(--text--color); /* Define a cor do texto do status */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Estilos para os botões nos formulários */
+.add-form button, .edit-form button {
+    border-radius: 3px; /* Arredonda os cantos do botão */
+    border: 1px solid var(--border--color); /* Define a borda com a cor especificada */
+    color: var(--link--color); /* Define a cor do texto do botão */
+    width: 5rem; /* Define a largura do botão */
+    height: 2rem; /* Define a altura do botão */
+    display: block; /* Exibe o botão como um bloco */
+    margin: 0 auto; /* Centraliza o botão horizontalmente */
+    margin-top: 10px; /* Adiciona margem acima do botão */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Remove o contorno padrão dos campos de entrada e caixas de texto quando estão focados */
+input:focus, 
+textarea:focus {
+    outline: none; /* Remove o contorno padrão */
+}
+
+/* (footer.html) Estilos para o rodapé */
+.footer {
+    text-align: center; /* Centraliza o texto do rodapé */
+    margin: 5px 0; /* Define a margem acima e abaixo do rodapé */
+    padding: 15px 0; /* Adiciona preenchimento ao redor do rodapé */
+}
+
+/* Estilos para o contêiner do rodapé */
+.footer-div {
+    background-color: var(--background--header--footer); /* Define a cor de fundo do rodapé */
+}
+
+/* Estilos para o texto do rodapé */
+.footer-p {
+    font-size: 1.2rem; /* Define o tamanho da fonte do texto do rodapé */
+    margin: 0; /* Remove a margem do parágrafo do rodapé */
+    padding: 0; /* Remove o preenchimento do parágrafo do rodapé */
+    color: var(--footer--color); /* Define a cor do texto do rodapé */
 }

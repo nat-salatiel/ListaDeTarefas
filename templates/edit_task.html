@@ -11,22 +11,25 @@
 
     {% include 'header.html' %}
 
-    <main>
-        <h1>Editar Tarefa</h1>
-        <form method="POST">
-            <label>Título:</label>
-            <input type="text" name="titulo" value="{{ task[2] }}" required>
-            <label>Descrição:</label>
-            <textarea name="descricao" required>{{ task[3] }}</textarea>
-            <label>Status:</label>
-            <input type="checkbox" name="status" value="on" {{checked}}> Concluído
-            <button type="submit">Salvar</button>
-        </form>
+    <div class="edit-main">
+        <main>
+            <h1 class="edit-title">Editar Tarefa</h1>
+            <form class="edit-form" method="POST">
+                <label class="edit-form-label">Título:</label>
+                <input type="text" name="titulo" value="{{ task[2] }}" required>
+                <label class="edit-form-label">Descrição:</label>
+                <textarea name="descricao" required>{{ task[3] }}</textarea>
+                <div class="status">
+                    <label class="edit-form-label">Status:</label>
+                    <input class="status" type="checkbox" name="status" value="on" {{checked}}> Concluído
+                </div>
+                <button type="submit">Salvar</button>
+            </form>
 
 
 
-    </main>
-
+        </main>
+    </div>
     {% include 'footer.html' %}
 </body>
 
