@@ -75,6 +75,10 @@ body {
     color: var(--text--color); /* Define a cor do texto dos itens da lista */
 }
 
+.home-task-two{
+    color: var(--title--color);
+}
+
 /* Estilos para ações de tarefas (links) */
 .task-actions a {
     font-size: 1.2rem; /* Define o tamanho da fonte dos links de ação */

@@ -16,12 +16,12 @@
       <ul class="home-ul"> <!-- Cria uma lista não ordenada para exibir as tarefas -->
         {% for task in tasks %} <!-- Início do loop para iterar sobre as tarefas passadas para o template -->
         <li class="home-ul-li"> <!-- Cada item da lista representa uma tarefa -->
-          {{ task[2] }}: {{ task[3] }}|  <!-- Exibe o título e a descrição da tarefa -->
-          {% if task[4] == 'concluido' %} <strong> Concluído </strong> {% else %} <strong> Pendente </strong> {% endif %} - 
+          <span class="home-task-two">{{ task[2] }}</span>: {{ task[3] }} <br/>  <!-- Exibe o título e a descrição da tarefa -->
+          {% if task[4] == 'concluido' %} <strong> Concluído </strong> {% else %} <strong> Pendente </strong> {% endif %} &nbsp;&nbsp;&nbsp;  
           {{ task[5] }} <!-- Exibe o status da tarefa em negrito e a data de criação -->
           
           <div class="task-actions"> <!-- Div para as ações da tarefa -->
-            <a href="/edit/{{ task[0] }}">Editar</a> <!-- Link para editar a tarefa -->
+            <a href="/edit/{{ task[0] }}">Editar</a> <!-- Link para editar a tarefa --> &nbsp; 
             <a href="#" onclick="if(confirm('Tem certeza que deseja apagar a tarefa \'{{ task[2] }}\'?')) location.href='/delete/{{ task[0] }}'">Remover</a> <!-- Link para remover a tarefa com confirmação -->
           </div>
         </li>
