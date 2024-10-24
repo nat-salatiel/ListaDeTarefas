@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<html lang="pt-br"> <!-- Declaração do tipo de documento e define o idioma da página como português do Brasil -->
 
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização responsiva para dispositivos móveis -->
-    <link rel="stylesheet" href="/static/css/style.css"> <!-- Link para o arquivo CSS externo para estilos -->
+    <link rel="stylesheet" href="/static/css/style.css"> <!-- Link para o arquivo CSS externo que contém os estilos da página -->
     <title>Erro 404</title> <!-- Título da página exibido na aba do navegador -->
 </head>
 
 <body>
-    {% include 'header.html' %} <!-- Inclui o cabeçalho da página a partir de um arquivo externo -->
+    {% include 'header.html' %} <!-- Inclui o cabeçalho da página a partir de um arquivo HTML externo -->
     
-    <main class="error-main"> <!-- Seção principal que contém a mensagem de erro -->
-        <h2 class="error-title">Ops! Página não encontrada.</h2> <!-- Título da mensagem de erro -->
-        <p class="error-message"> Verifique se a URL está correta e tente novamente, ou use a navegação acima!</p> <!-- Mensagem explicativa para o usuário -->
-        <img src="/static/img/404erro.jpg" alt="imagem de erro 404, página não encontrada"> <!-- Imagem ilustrativa do erro 404 -->
+    <main class="error-main"> <!-- Seção principal que exibe a mensagem de erro -->
+        <h2 class="error-title">Ops! Página não encontrada.</h2> <!-- Título informando que a página não foi encontrada -->
+        <p class="error-message">Verifique se a URL está correta e tente novamente, ou use a navegação acima!</p> <!-- Mensagem orientando o usuário a verificar a URL -->
+        <img src="/static/img/404erro.jpg" alt="imagem de erro 404, página não encontrada"> <!-- Imagem ilustrativa para o erro 404 -->
     </main>
     
-    {% include 'footer.html' %} <!-- Inclui o rodapé da página a partir de um arquivo externo -->
+    {% include 'footer.html' %} <!-- Inclui o rodapé da página a partir de um arquivo HTML externo -->
 </body>
 
 </html>

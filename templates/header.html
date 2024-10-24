@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
 <head>
-    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização responsiva para dispositivos móveis -->
-    <link rel="stylesheet" href="/static/css/style.css"> <!-- Link para o arquivo CSS externo para estilos -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização responsiva para diferentes dispositivos -->
+    <link rel="stylesheet" href="/static/css/style.css"> <!-- Link para o arquivo CSS externo que contém os estilos da página -->
     <title>Lista de Tarefas</title> <!-- Título da página exibido na aba do navegador -->
 </head>
 <body>
     <header class="header"> <!-- Seção de cabeçalho da página -->
         <h1 class="header-title">Minha Lista de Tarefas</h1> <!-- Título principal da lista de tarefas -->
-        <nav class="header-nav"> <!-- Seção de navegação do cabeçalho -->
+        <nav class="header-nav"> <!-- Seção de navegação dentro do cabeçalho -->
             <ul class="header-nav-ul"> <!-- Lista não ordenada para os itens de navegação -->
-                <li class="header-nav-ul-li"><a href="{{ url_for('home') }}">Home</a></li> <!-- Link para a página inicial -->
-                <li class="header-nav-ul-li"><a href="{{ url_for('add_task') }}">Adicionar Tarefa</a></li> <!-- Link para a página de adicionar tarefa -->
+                <li class="header-nav-ul-li"><a href="{{ url_for('home') }}">Home</a></li> <!-- Link que redireciona para a página inicial -->
+                <li class="header-nav-ul-li"><a href="{{ url_for('add_task') }}">Adicionar Tarefa</a></li> <!-- Link que redireciona para a página de adicionar uma nova tarefa -->
             </ul>
         </nav>
     </header>

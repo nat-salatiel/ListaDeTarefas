@@ -3,7 +3,7 @@
     margin: 0; /* Remove a margem padrão de todos os elementos */
     padding: 0; /* Remove o preenchimento padrão de todos os elementos */
     box-sizing: border-box; /* Inclui bordas e preenchimentos nas dimensões totais dos elementos */
-    
+
     /* Definição de variáveis de cores para uso em todo o CSS */
     --link--color: #062e58; /* Cor dos links */
     --title--color: #15117c; /* Cor dos títulos */
@@ -16,7 +16,7 @@
 
 /* Estilos para o corpo da página */
 body {
-    background-color: #e2def7; /* Define a cor de fundo do corpo */
+    background-color: #cbc7df; /* Define a cor de fundo do corpo da página */
     margin: .30rem; /* Define a margem ao redor do corpo */
     padding: .5rem; /* Define o preenchimento interno do corpo */
 }
@@ -28,7 +28,7 @@ body {
 
 /* Estilos para o título do cabeçalho */
 .header-title {
-    text-align: center; /* Centraliza o texto */
+    text-align: center; /* Centraliza o texto do título */
     margin: 0; /* Remove a margem do título */
     padding: 10px; /* Adiciona preenchimento ao redor do título */
     color: var(--title--color); /* Define a cor do texto do título */
@@ -41,7 +41,7 @@ body {
 
 /* Estilos para a lista de navegação */
 .header-nav-ul {
-    display: flex; /* Exibe os itens em linha (flexbox) */
+    display: flex; /* Exibe os itens da lista em linha usando flexbox */
     margin: 0; /* Remove a margem da lista */
     padding: 0; /* Remove o preenchimento da lista */
     gap: 20px; /* Espaçamento entre os itens da lista */
@@ -52,7 +52,7 @@ body {
 
 /* Estilos para os links dentro dos itens da lista de navegação */
 .header-nav-ul-li a {
-    color: var(--link--color); /* Cor padrão do link */
+    color: var(--link--color); /* Define a cor padrão do link */
     text-decoration: none; /* Remove o sublinhado do link */
     font-size: 24px; /* Define o tamanho da fonte do link */
 }
@@ -63,7 +63,7 @@ body {
     text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
 }
 
-/* Estilos para a seção principal da página */
+/* Estilos para as seções principais da página */
 .home-main, .add-main, .edit-main, .error-main {
     background-color: var(--background--templates); /* Define a cor de fundo para as seções principais */
 }
@@ -75,8 +75,8 @@ body {
     color: var(--text--color); /* Define a cor do texto dos itens da lista */
 }
 
-.home-task-two{
-    color: var(--title--color);
+.home-task-two {
+    color: var(--title--color); /* Define a cor do texto para tarefas específicas */
 }
 
 /* Estilos para ações de tarefas (links) */
@@ -93,9 +93,9 @@ body {
 }
 
 /* (add_task.html) e (edit_task.html) Estilos para os títulos das páginas de adicionar e editar */
-.add-title, .edit-title, .error-title {
+.add-title, .edit-title, .error-title, .home-empty-title {
     color: var(--title--color); /* Define a cor do título */
-    text-align: center; /* Centraliza o texto */
+    text-align: center; /* Centraliza o texto do título */
     font-size: 22px; /* Define o tamanho da fonte do título */
     margin: 10px 0; /* Define a margem acima e abaixo do título */
     padding: 5px 0; /* Adiciona preenchimento acima e abaixo do título */
@@ -103,8 +103,8 @@ body {
 
 /* Estilos para os formulários de adicionar e editar */
 .add-form, .edit-form {
-    display: flex; /* Usa flexbox para layout */
-    flex-direction: column; /* Alinha os itens na coluna */
+    display: flex; /* Usa flexbox para layout dos formulários */
+    flex-direction: column; /* Alinha os itens do formulário em coluna */
     gap: 5px; /* Espaçamento entre os itens do formulário */
     padding: 10px; /* Adiciona preenchimento ao redor do formulário */
 }
@@ -177,7 +177,7 @@ textarea:focus {
     color: var(--footer--color); /* Define a cor do texto do rodapé */
 }
 
-/* (404.html) Estilos para a página de erro 404 */
+/* (404.html) Estilos para a página de erro 404 e bloco de página vazia (..home.html) */
 .error-message {
     text-align: center; /* Centraliza o texto da mensagem de erro */
     color: var(--text--color); /* Define a cor do texto da mensagem de erro */
@@ -187,9 +187,12 @@ textarea:focus {
 
 .error-main img {
     width: 700px; /* Define a largura da imagem */
+}
+
+.error-main img, .home-empty-image {
     height: auto; /* Mantém a proporção da altura da imagem */
     display: block; /* Exibe a imagem como um bloco */
     margin: 0 auto; /* Centraliza a imagem horizontalmente */
     max-width: 100%; /* Garante que a imagem não exceda a largura do contêiner */
-    padding-bottom: 15px; /* Adiciona preenchimento abaixo da imagem */
+    padding-bottom: 30px; /* Adiciona preenchimento abaixo da imagem */
 }
