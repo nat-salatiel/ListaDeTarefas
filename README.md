@@ -1,7 +1,7 @@
  <h1>Minha lista de tarefas</h1>
 
 <h2>🔖 Sobre</h2>
-<p>Aplicativo simples de lista de tarefas. Utilizando Python, Flask e MySQL.</p>
+<p>Lista para armazenamento de tarefas. Contém opções de: adicionar, editar e excluir, e, status: pendente ou concluído.</p>
 
 ## 🚀  Tecnologias
 <div>
